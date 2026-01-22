@@ -1,53 +1,64 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // 1. Elementos
-    const navLinks = document.querySelectorAll('[data-section]');
-    const sections = document.querySelectorAll('.section');
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- 1. MENÚ MÓVIL ---
     const menuToggle = document.getElementById('menuToggle');
     const mainMenu = document.getElementById('mainMenu');
 
-    // 2. Función para cambiar sección
-    function switchSection(sectionId) {
-        // Ocultar todas
-        sections.forEach(sec => sec.classList.remove('active'));
+    menuToggle.addEventListener('click', () => {
+        mainMenu.classList.toggle('active');
         
-        // Mostrar la elegida
-        const target = document.getElementById(sectionId);
-        if(target) {
-            target.classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Cambiar ícono de hamburguesa a X
+        const icon = menuToggle.querySelector('i');
+        if (mainMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
         }
-
-        // Actualizar menú activo
-        navLinks.forEach(link => {
-            if(link.getAttribute('data-section') === sectionId) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-
-        // Cerrar menú móvil si está abierto
-        if(mainMenu.classList.contains('active')) {
-            mainMenu.classList.remove('active');
-        }
-    }
-
-    // 3. Event Listeners para clicks en menú
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('data-section');
-            switchSection(targetId);
-        });
     });
 
-    // 4. Menú Hamburguesa (Móvil)
-    if(menuToggle) {
-        menuToggle.addEventListener('click', () => {
-            mainMenu.classList.toggle('active');
-        });
-    }
+    // --- 2. NAVEGACIÓN SPA (Single Page Application) ---
+    // Seleccionamos todos los links que tengan el atributo data-section
+    const navLinks = document.querySelectorAll('a[data-section]');
+    const sections = document.querySelectorAll('.section');
 
-    // 5. Iniciar en Home
-    switchSection('home');
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); // Evita que la página salte o recargue
+
+            // 1. Obtener el id de la sección destino
+            const sectionId = link.getAttribute('data-section');
+            
+            // 2. Ocultar todas las secciones
+            sections.forEach(sec => sec.classList.remove('active'));
+
+            // 3. Mostrar la sección seleccionada
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                
+                // Scroll suave al inicio de la sección
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            // 4. Actualizar clase 'active' en el menú (solo si está en el menú principal)
+            // Removemos active de todos los links del menú principal
+            const menuLinks = document.querySelectorAll('.main-menu a');
+            menuLinks.forEach(ml => ml.classList.remove('active'));
+            
+            // Si el link clickeado está dentro del menú principal, activarlo
+            if (link.closest('.main-menu')) {
+                link.classList.add('active');
+            }
+
+            // 5. Cerrar menú móvil si está abierto
+            if (mainMenu.classList.contains('active')) {
+                mainMenu.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    });
 });
