@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ecomoda - Moda Sostenible</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo" onclick="location.reload()">
+                <i class="fas fa-leaf"></i> Ecomoda
+            </a>
+
+            <nav>
+                <ul class="main-menu" id="mainMenu">
+                    <li><a href="#" class="active" data-section="home">Home</a></li>
+                    <li><a href="#" data-section="about">¿Quiénes somos?</a></li>
+                    <li><a href="#" data-section="news">Actualidad</a></li>
+                    <li><a href="#" data-section="brands">Marcas</a></li>
+                    <li><a href="#" data-section="community">Comunidad</a></li>
+                </ul>
+            </nav>
+
+            <div class="search-bar">
+                <i class="fas fa-search" style="color:var(--text-soft)"></i>
+                <input type="text" placeholder="Buscar..." />
+            </div>
+
+            <button class="mobile-menu-btn" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section id="home" class="section active">
+            <div class="ad-banner">
+                🛍️ ¡Nueva colección sostenible! | Diseño ético, materiales reciclados
+            </div>
+
+            <div class="home-grid">
+                <div>
+                    <div class="hero">
+                        <h2>Moda con Conciencia</h2>
+                        <p>Descubre cómo tu elección de vestimenta puede transformar el planeta</p>
+                    </div>
+
+                    <h2 class="section-title"><i class="fas fa-globe-americas"></i> Lo último</h2>
+                    
+                    <div class="news-list">
+                        <div class="news-item">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=150&q=80" alt="Vintage">
+                            <div>
+                                <div class="news-category">Tendencias</div>
+                                <h3>El auge del vintage y la ropa usada</h3>
+                                <p style="font-size:0.9rem; color:var(--text-soft)">Una decisión inteligente y ecológica.</p>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=150&q=80" alt="Feria">
+                            <div>
+                                <div class="news-category">Eventos</div>
+                                <h3>Feria de Moda Sostenible en Caracas</h3>
+                                <p style="font-size:0.9rem; color:var(--text-soft)">Más de 50 marcas locales reunidas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="sidebar-card">
+                        <h3 class="section-title" style="font-size:1.3rem;"><i class="fas fa-star"></i> Top Marcas</h3>
+                        
+                        <div class="brand-item">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=100&q=60" alt="Verde Hilos">
+                            <div>
+                                <h4>Verde Hilos</h4>
+                                <small style="color:var(--terracotta); font-weight:bold;"><i class="fas fa-star"></i> 4.8</small>
+                            </div>
+                        </div>
+                        
+                        <div class="brand-item">
+                            <img src="https://ucc7afa3b19e20d0ab27ad98bb34.previews.dropboxusercontent.com/p/thumb/AC6fpjmDQOp9yrVgyuyPnwOU1rMWk8BbKhI787FmpKqdYaIeBE6bEfMtV6E1NB6rX3vW-EYWrEQgoWwrAwzsDEboNIEITzh6XcBocwjBNfjEKlMYT3o4Y7-XLJQ9QGcXi5yKeHjxLt1h-dyzFIpeepzROy1nGhZ18zVwz2CnoZXyJnY735CjrSYl8lAuYOsbQe8dNe2r_LeAUBSzGEY7a6wmluegsjAj2WcUCYW_hOF1dK2edz29Ve0CS6J32g6corwTDdZ_0Waj0KENvq9WCsF0JyHk2fNEyLkHQck75PgdkIkuoO9V25piUDNrKIyLOqF6RMes94BLGRBYNH6VYOixHR9Ooizm7sBHEUOrCatFEA/p.jpeg" alt="GreenWeave">
+                            <div>
+                                <h4>GreenWeave</h4>
+                                <small style="color:var(--terracotta); font-weight:bold;"><i class="fas fa-star"></i> 4.9</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3 class="section-title" style="font-size:1.3rem;">Síguenos</h3>
+                        <div style="font-size:1.5rem; display:flex; gap:1rem;">
+                            <a href="#"><i class="fab fa-instagram" style="color:var(--text-soft)"></i></a>
+                            <a href="#"><i class="fab fa-twitter" style="color:var(--text-soft)"></i></a>
+                            <a href="#"><i class="fab fa-facebook" style="color:var(--text-soft)"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="section-grid">
+                <div>
+                    <h2 class="section-title">Nuestra Historia</h2>
+                    <p style="margin-bottom:1rem;">
+                        Ecomoda nace como una iniciativa universitaria de la <strong>Universidad Santa María FACES</strong>, 
+                        con el propósito de fomentar el consumo responsable y la concienciación ambiental 
+                        en la industria de la moda.
+                    </p>
+                    <div style="background:var(--white); padding:1.5rem; border-radius:0.75rem; border-left: 4px solid var(--terracotta); box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                        <h3 style="color:var(--forest-green); margin-bottom:0.5rem;">Misión</h3>
+                        <p>Promover una cultura de vestimenta ética y sostenible que respete tanto al planeta como a las personas.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&w=600&q=80" alt="Equipo" style="width:100%; border-radius:1rem;">
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="section">
+            <h2 class="section-title"><i class="fas fa-newspaper"></i> Noticias Completas</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80" alt="Ropa">
+                    <span class="news-category">Tendencias</span>
+                    <h3 style="margin-top:0.5rem;">El auge del vintage</h3>
+                    <p style="font-size:0.9rem; color:var(--text-soft);">Comprar ropa usada reduce residuos y crea estilo único.</p>
+                    <button class="btn-outline" style="border:none; text-align:left; padding-left:0;">Leer más →</button>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Zapatillas">
+                    <span class="news-category">Nacional</span>
+                    <h3 style="margin-top:0.5rem;">Feria en Caracas</h3>
+                    <p style="font-size:0.9rem; color:var(--text-soft);">Evento masivo de moda ética en la capital.</p>
+                    <button class="btn-outline" style="border:none; text-align:left; padding-left:0;">Leer más →</button>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&w=600&q=80" alt="Guía">
+                    <span class="news-category">Guías</span>
+                    <h3 style="margin-top:0.5rem;">Armario Cápsula</h3>
+                    <p style="font-size:0.9rem; color:var(--text-soft);">Menos ropa, más combinaciones. Aprende cómo.</p>
+                    <button class="btn-outline" style="border:none; text-align:left; padding-left:0;">Leer más →</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="brands" class="section">
+            <h2 class="section-title"><i class="fas fa-store"></i> Directorio de Marcas</h2>
+            
+            <div class="brands-layout">
+                <div class="cards-centered">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80" alt="Verde Hilos">
+                        <h3>Verde Hilos</h3>
+                        <p style="color:var(--text-soft);">Venezuela</p>
+                        <p style="font-size:0.9rem;">Tejidos 100% orgánicos y locales.</p>
+                        <button class="btn" style="width:100%; margin-top:1rem;">Ver Perfil</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="EcoTextil">
+                        <h3>EcoTextil</h3>
+                        <p style="color:var(--text-soft);">Colombia</p>
+                        <p style="font-size:0.9rem;">Expertos en reciclaje textil.</p>
+                        <button class="btn" style="width:100%; margin-top:1rem;">Ver Perfil</button>
+                    </div>
+                </div>
+
+                <div class="contact-sidebar">
+                    <h3>¿Tienes una marca?</h3>
+                    <p style="font-size:0.9rem; margin-bottom:1.5rem; color:var(--text-soft);">Únete a nuestra plataforma.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <strong>Email</strong><br>
+                            <small>partners@ecomoda.com</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <strong>Teléfono</strong><br>
+                            <small>+58 212-999-0000</small>
+                        </div>
+                    </div>
+                    <button class="btn-outline">Solicitar Unión</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="community" class="section">
+            <h2 class="section-title"><i class="fas fa-users"></i> Comunidad Activa</h2>
+            <div class="section-grid">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=800&q=80" alt="Comunidad" style="width:100%; border-radius:1rem; margin-bottom:1rem;">
+                    <h3>Próximos Eventos</h3>
+                    <ul style="list-style:none; margin-top:1rem;">
+                        <li style="background:var(--white); padding:1rem; margin-bottom:0.5rem; border-radius:0.5rem; display:flex; justify-content:space-between; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                            <span>👕 Intercambio de Ropa</span>
+                            <span style="color:var(--terracotta); font-weight:bold;">Sáb 24</span>
+                        </li>
+                        <li style="background:var(--white); padding:1rem; margin-bottom:0.5rem; border-radius:0.5rem; display:flex; justify-content:space-between; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                            <span>🧵 Taller de Reparación</span>
+                            <span style="color:var(--terracotta); font-weight:bold;">Dom 25</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Consejos Rápidos</h3>
+                    <div style="background:var(--white); padding:1rem; border-radius:0.5rem; margin-bottom:1rem; border:1px solid var(--border-color);">
+                        <strong style="color:var(--sage-green);">Agua Fría</strong><br>Lava tus prendas con agua fría para ahorrar energía.
+                    </div>
+                    <div style="background:var(--white); padding:1rem; border-radius:0.5rem; margin-bottom:1rem; border:1px solid var(--border-color);">
+                        <strong style="color:var(--sage-green);">Repara</strong><br>Un botón suelto no es el fin de una camisa.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <span class="footer-logo"><i class="fas fa-leaf"></i> Ecomoda</span>
+                    <p style="font-size:0.9rem;">Iniciativa de la Universidad Santa María FACES.</p>
+                </div>
+                <div>
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="#" onclick="document.querySelector('[data-section=home]').click()">Inicio</a></li>
+                        <li><a href="#" onclick="document.querySelector('[data-section=brands]').click()">Marcas</a></li>
+                        <li><a href="#" onclick="document.querySelector('[data-section=news]').click()">Noticias</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contacto</h3>
+                    <p style="font-size:0.9rem;">Caracas, Venezuela</p>
+                    <p style="font-size:0.9rem;">contacto@ecomoda.com</p>
+                </div>
+                <div>
+                    <h3>Redes</h3>
+                    <div style="font-size:1.2rem; display:flex; gap:1rem;">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Ecomoda. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
